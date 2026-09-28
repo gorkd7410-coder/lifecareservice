@@ -1,0 +1,269 @@
+[
+  {
+    "id": "p101",
+    "cat": "edu",
+    "name": "86인치 4K 전자칠판",
+    "summary": "터치 20점, 안드로이드 내장, 벽걸이·스탠드형",
+    "price": null,
+    "unit": "1대",
+    "saleType": "inquiry",
+    "options": [
+      "벽걸이형",
+      "이동식 스탠드형"
+    ],
+    "stock": "in",
+    "purchasable": false,
+    "smartstore": null,
+    "image": null,
+    "tags": [
+      "납품 사례"
+    ]
+  },
+  {
+    "id": "p102",
+    "cat": "edu",
+    "name": "전자교탁 (강의용 일체형)",
+    "summary": "PC, 앰프, 실물화상기 일체형",
+    "price": null,
+    "unit": "1대",
+    "saleType": "inquiry",
+    "options": [],
+    "stock": "in",
+    "purchasable": false,
+    "smartstore": null,
+    "image": null,
+    "tags": []
+  },
+  {
+    "id": "p103",
+    "cat": "edu",
+    "name": "65인치 회의실 터치 디스플레이",
+    "summary": "무선 화면공유, 화상회의 카메라 옵션",
+    "price": null,
+    "unit": "1대",
+    "saleType": "inquiry",
+    "options": [
+      "기본",
+      "카메라 포함"
+    ],
+    "stock": "in",
+    "purchasable": false,
+    "smartstore": null,
+    "image": null,
+    "tags": []
+  },
+  {
+    "id": "p001",
+    "cat": "health",
+    "name": "6년근 홍삼정 스틱 30포",
+    "summary": "하루 한 포, 물 없이 간편하게",
+    "price": 59000,
+    "unit": "1박스",
+    "saleType": "sale",
+    "options": [
+      "30포",
+      "60포 (+49,000원)"
+    ],
+    "stock": "in",
+    "purchasable": false,
+    "smartstore": "https://smartstore.naver.com/lifecareservice",
+    "image": null,
+    "tags": [
+      "인기"
+    ]
+  },
+  {
+    "id": "p002",
+    "cat": "health",
+    "name": "생유산균 100억 CFU 60캡슐",
+    "summary": "장 건강을 위한 2개월분",
+    "price": 32000,
+    "unit": "1통",
+    "saleType": "sale",
+    "options": [
+      "1통",
+      "3통 세트 (+58,000원)"
+    ],
+    "stock": "in",
+    "purchasable": false,
+    "smartstore": "https://smartstore.naver.com/lifecareservice",
+    "image": null,
+    "tags": []
+  },
+  {
+    "id": "p003",
+    "cat": "health",
+    "name": "rTG 오메가3 1,000mg",
+    "summary": "고함량 rTG형, 3개월분",
+    "price": 45000,
+    "unit": "1통",
+    "saleType": "sale",
+    "options": [
+      "1통"
+    ],
+    "stock": "low",
+    "purchasable": false,
+    "smartstore": "https://smartstore.naver.com/lifecareservice",
+    "image": null,
+    "tags": []
+  },
+  {
+    "id": "p004",
+    "cat": "device",
+    "name": "무선 목·어깨 마사지기",
+    "summary": "온열 기능, 3단계 강도 조절",
+    "price": 89000,
+    "unit": "1대",
+    "saleType": "sale",
+    "options": [
+      "그레이",
+      "베이지"
+    ],
+    "stock": "in",
+    "purchasable": false,
+    "smartstore": "https://smartstore.naver.com/lifecareservice",
+    "image": null,
+    "tags": [
+      "인기"
+    ]
+  },
+  {
+    "id": "p005",
+    "cat": "device",
+    "name": "가정용 자동 혈압계",
+    "summary": "팔뚝형, 음성 안내, 기록 120회",
+    "price": 67000,
+    "unit": "1대",
+    "saleType": "sale",
+    "options": [
+      "기본형"
+    ],
+    "stock": "in",
+    "purchasable": false,
+    "smartstore": "https://smartstore.naver.com/lifecareservice",
+    "image": null,
+    "tags": []
+  },
+  {
+    "id": "p007",
+    "cat": "senior",
+    "name": "접이식 경량 보행보조기",
+    "summary": "알루미늄 프레임 2.1kg, 좌석 포함",
+    "price": 128000,
+    "unit": "1대",
+    "saleType": "sale",
+    "options": [
+      "기본"
+    ],
+    "stock": "in",
+    "purchasable": false,
+    "smartstore": "https://smartstore.naver.com/lifecareservice",
+    "image": null,
+    "tags": []
+  },
+  {
+    "id": "p008",
+    "cat": "senior",
+    "name": "욕실 안전손잡이 설치 패키지",
+    "summary": "방문 설치 포함, 지역별 상담",
+    "price": null,
+    "unit": "1세트",
+    "saleType": "inquiry",
+    "options": [],
+    "stock": "in",
+    "purchasable": false,
+    "smartstore": null,
+    "image": null,
+    "tags": []
+  },
+  {
+    "id": "p009",
+    "cat": "senior",
+    "name": "성인용 위생 패드 대형 10팩",
+    "summary": "흡수력 강화, 정기배송 가능",
+    "price": 48000,
+    "unit": "10팩",
+    "saleType": "sale",
+    "options": [
+      "대형",
+      "특대형 (+6,000원)"
+    ],
+    "stock": "in",
+    "purchasable": false,
+    "smartstore": "https://smartstore.naver.com/lifecareservice",
+    "image": null,
+    "tags": []
+  },
+  {
+    "id": "p013",
+    "cat": "rental",
+    "name": "직수형 냉온정수기",
+    "summary": "4개월 주기 방문 관리 포함",
+    "price": 29900,
+    "unit": "월",
+    "saleType": "rental",
+    "options": [
+      "60개월 약정",
+      "36개월 약정 (+월 5,000원)"
+    ],
+    "stock": "in",
+    "purchasable": false,
+    "smartstore": null,
+    "image": null,
+    "tags": [],
+    "rentalMonths": 60
+  },
+  {
+    "id": "p014",
+    "cat": "rental",
+    "name": "프리미엄 안마의자",
+    "summary": "전신 3D 마사지, 무료 설치",
+    "price": 69900,
+    "unit": "월",
+    "saleType": "rental",
+    "options": [
+      "48개월 약정"
+    ],
+    "stock": "in",
+    "purchasable": false,
+    "smartstore": null,
+    "image": null,
+    "tags": [],
+    "rentalMonths": 48
+  },
+  {
+    "id": "p016",
+    "cat": "gift",
+    "name": "효도 건강 선물세트",
+    "summary": "홍삼, 유산균, 오메가3 구성",
+    "price": 119000,
+    "unit": "1세트",
+    "saleType": "sale",
+    "options": [
+      "기본 포장",
+      "보자기 포장 (+5,000원)"
+    ],
+    "stock": "in",
+    "purchasable": false,
+    "smartstore": "https://smartstore.naver.com/lifecareservice",
+    "image": null,
+    "tags": [
+      "명절"
+    ]
+  },
+  {
+    "id": "p017",
+    "cat": "gift",
+    "name": "기업 단체 선물 (30세트 이상)",
+    "summary": "수량과 예산에 맞춘 구성 제안",
+    "price": null,
+    "unit": "-",
+    "saleType": "inquiry",
+    "options": [],
+    "stock": "in",
+    "purchasable": false,
+    "smartstore": null,
+    "image": null,
+    "tags": []
+  }
+]

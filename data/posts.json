@@ -1,0 +1,116 @@
+[
+  {
+    "id": "b01",
+    "type": "project",
+    "title": "OO초등학교 86인치 전자칠판 12대 납품",
+    "date": "2026-09-18",
+    "url": "https://blog.naver.com/lifecareservicejoa",
+    "thumbnail": null,
+    "client": "OO초등학교",
+    "location": "경기 수원",
+    "summary": "3~6학년 교실 12곳에 벽걸이형으로 설치했어요. 기존 칠판 철거부터 선생님 사용 교육까지 하루에 마쳤습니다.",
+    "productIds": [
+      "p101"
+    ]
+  },
+  {
+    "id": "b02",
+    "type": "project",
+    "title": "△△중학교 전자칠판과 전자교탁 교체 설치",
+    "date": "2026-08-29",
+    "url": "https://blog.naver.com/lifecareservicejoa",
+    "thumbnail": null,
+    "client": "△△중학교",
+    "location": "서울 강서",
+    "summary": "과학실과 음악실에 이동식 스탠드형 전자칠판 2대, 전자교탁 2대를 함께 넣었어요.",
+    "productIds": [
+      "p101",
+      "p102"
+    ]
+  },
+  {
+    "id": "b03",
+    "type": "project",
+    "title": "□□학원 강의실 6곳 전자칠판 구축",
+    "date": "2026-07-10",
+    "url": "https://blog.naver.com/lifecareservicejoa",
+    "thumbnail": null,
+    "client": "□□학원",
+    "location": "인천 연수",
+    "summary": "판서 녹화 기능으로 결석생 보강 영상을 바로 만들 수 있게 세팅했어요.",
+    "productIds": [
+      "p101"
+    ]
+  },
+  {
+    "id": "b04",
+    "type": "project",
+    "title": "◇◇기업 회의실 터치 디스플레이 설치",
+    "date": "2026-06-21",
+    "url": "https://blog.naver.com/lifecareservicejoa",
+    "thumbnail": null,
+    "client": "◇◇기업",
+    "location": "성남 판교",
+    "summary": "회의실 4곳에 65인치 디스플레이와 화상회의 카메라를 설치했어요.",
+    "productIds": [
+      "p103"
+    ]
+  },
+  {
+    "id": "b05",
+    "type": "project",
+    "title": "OO노인복지관 안마의자 5대 렌탈 설치",
+    "date": "2026-09-05",
+    "url": "https://blog.naver.com/lifecareservicejoa",
+    "thumbnail": null,
+    "client": "OO노인복지관",
+    "location": "대전 서구",
+    "summary": "휴게실에 안마의자 5대를 들이고, 6개월마다 방문 점검을 하고 있어요.",
+    "productIds": [
+      "p014"
+    ]
+  },
+  {
+    "id": "b06",
+    "type": "project",
+    "title": "부모님 댁 욕실 안전손잡이 설치 후기",
+    "date": "2026-09-12",
+    "url": "https://blog.naver.com/lifecareservicejoa",
+    "thumbnail": null,
+    "client": "개인 고객",
+    "location": "서울 노원",
+    "summary": "변기 옆, 욕조 입구, 샤워 공간 세 곳에 손잡이를 달았어요.",
+    "productIds": [
+      "p008",
+      "p007"
+    ]
+  },
+  {
+    "id": "b07",
+    "type": "info",
+    "title": "환절기 면역 관리, 홍삼과 유산균 같이 먹어도 될까요?",
+    "date": "2026-09-20",
+    "url": "https://blog.naver.com/lifecareservicejoa",
+    "thumbnail": null,
+    "summary": "복용 시간과 함께 먹을 때 주의할 점을 정리했어요.",
+    "productIds": [
+      "p001",
+      "p002"
+    ]
+  },
+  {
+    "id": "b08",
+    "type": "project",
+    "title": "△△건설 추석 선물세트 120세트 납품",
+    "date": "2026-09-15",
+    "url": "https://blog.naver.com/lifecareservicejoa",
+    "thumbnail": null,
+    "client": "△△건설",
+    "location": "서울 서초",
+    "summary": "직원용 효도 선물세트를 이름 스티커와 함께 포장해 보냈어요.",
+    "productIds": [
+      "p016",
+      "p017"
+    ]
+  }
+]

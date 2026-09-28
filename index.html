@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="건강식품, 헬스케어기기, 시니어케어, 렌탈까지 라이프케어서비스가 취급하는 상품을 소개합니다.">
+<meta name="description" content="전자칠판부터 건강식품, 헬스케어기기, 렌탈까지. 라이프케어서비스가 취급하는 상품과 납품 사례를 소개합니다.">
 <meta property="og:title" content="라이프케어서비스">
-<meta property="og:description" content="가족 건강과 생활을 위한 케어 상품을 모았어요.">
+<meta property="og:description" content="취급 상품과 실제 납품·설치 사례를 한곳에서 보세요.">
 <title>라이프케어서비스</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
 :root{
   --outer:#E9EEEA; --ground:#F7F9F7; --surface:#FFFFFF; --soft:#EDF2EE; --line:#DCE4DE;
   --ink:#1D2724; --muted:#5E6C66; --accent:#2E6B58; --accent-ink:#FFFFFF;
-  --accent-soft:#DCEBE3; --warm:#B0612B; --warm-soft:#F6E8DC; --scrim:rgba(20,28,25,.45);
+  --accent-soft:#DCEBE3; --warm:#B0612B; --warm-soft:#F6E8DC;
   --store:#03C75A; --store-ink:#FFFFFF;
   --t1:#CFE3D8; --t2:#E8DCC8; --t3:#D5DCEB; --t4:#EAD6D6; --t5:#DDE6C9; --t6:#E2D9EA;
   --bar-h:64px; --tabs-h:48px;
@@ -24,7 +24,7 @@
     color-scheme:dark;
     --outer:#0E1311; --ground:#141A18; --surface:#1C2421; --soft:#222C28; --line:#33403A;
     --ink:#E6ECE8; --muted:#9DAAA4; --accent:#7CC2A8; --accent-ink:#10201A;
-    --accent-soft:#24372F; --warm:#E3A06F; --warm-soft:#3A2B20; --scrim:rgba(0,0,0,.6);
+    --accent-soft:#24372F; --warm:#E3A06F; --warm-soft:#3A2B20;
     --t1:#27392F; --t2:#3A3326; --t3:#2A3040; --t4:#3B2B2B; --t5:#303923; --t6:#342C3D;
   }
 }
@@ -32,27 +32,25 @@
   color-scheme:dark;
   --outer:#0E1311; --ground:#141A18; --surface:#1C2421; --soft:#222C28; --line:#33403A;
   --ink:#E6ECE8; --muted:#9DAAA4; --accent:#7CC2A8; --accent-ink:#10201A;
-  --accent-soft:#24372F; --warm:#E3A06F; --warm-soft:#3A2B20; --scrim:rgba(0,0,0,.6);
+  --accent-soft:#24372F; --warm:#E3A06F; --warm-soft:#3A2B20;
   --t1:#27392F; --t2:#3A3326; --t3:#2A3040; --t4:#3B2B2B; --t5:#303923; --t6:#342C3D;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html,body{margin:0}
+img{max-width:100%;display:block}
+[hidden]{display:none!important}
 body{background:var(--outer);color:var(--ink);font:15px/1.6 "Noto Sans KR",system-ui,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;word-break:keep-all;-webkit-tap-highlight-color:transparent}
 h1,h2,h3{font-family:"IBM Plex Sans KR","Noto Sans KR",system-ui,sans-serif;text-wrap:balance;margin:0;line-height:1.3}
 a{color:inherit}
 button{font:inherit;color:inherit;cursor:pointer}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
-/* 모바일 한 줄 레이아웃. 데스크톱에서는 가운데 폰 폭 기둥으로 보여 줍니다 */
 .app{max-width:520px;margin:0 auto;background:var(--ground);min-height:100vh;padding-bottom:calc(var(--bar-h) + env(safe-area-inset-bottom,0px) + 16px)}
 @media (min-width:560px){.app{border-inline:1px solid var(--line)}}
-.pad{padding-inline:16px}
-
-.proto{background:var(--warm-soft);color:var(--warm);font-size:12px;padding:6px 16px;text-align:center}
 
 /* 헤더 */
 .top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px 10px}
-.brand{display:flex;align-items:center;gap:9px;font-family:"IBM Plex Sans KR",sans-serif;font-weight:700;font-size:17px}
+.brand{display:flex;align-items:center;gap:9px;font-family:"IBM Plex Sans KR",sans-serif;font-weight:700;font-size:17px;text-decoration:none}
 .mark{width:28px;height:28px;border-radius:8px;background:var(--accent);display:grid;place-items:center}
 .mark svg{width:16px;height:16px}
 .top-links{display:flex;gap:6px}
@@ -67,7 +65,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .fact{background:var(--soft);border-radius:8px;padding:4px 10px;font-size:12.5px;color:var(--muted)}
 .fact b{color:var(--ink);font-variant-numeric:tabular-nums}
 
-/* 카테고리 탭바 (스크롤하면 위에 붙음) */
+/* 카테고리 탭바 */
 .tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--ground) 94%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .tabs-inner{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;padding-inline:10px;height:var(--tabs-h);align-items:stretch}
 .tabs-inner::-webkit-scrollbar{display:none}
@@ -76,45 +74,80 @@ button{font:inherit;color:inherit;cursor:pointer}
 .tab[aria-current="true"]::after{content:"";position:absolute;left:11px;right:11px;bottom:0;height:3px;border-radius:3px 3px 0 0;background:var(--accent)}
 .tab .n{font-size:11.5px;color:var(--muted);font-weight:400;margin-left:3px;font-variant-numeric:tabular-nums}
 
-/* 카테고리 섹션 */
-.cat-sec{scroll-margin-top:calc(var(--tabs-h) + env(safe-area-inset-top,0px));padding-top:22px}
+/* 상품 목록 */
+.cat-sec,.sec{scroll-margin-top:calc(var(--tabs-h) + env(safe-area-inset-top,0px))}
+.cat-sec{padding-top:22px}
 .cat-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding-inline:16px;margin-bottom:6px}
 .cat-head h2{font-size:18px}
 .cat-head span{font-size:12.5px;color:var(--muted)}
 .list{display:grid;padding-inline:16px}
-.item{display:grid;grid-template-columns:84px 1fr;gap:14px;align-items:center;padding-block:12px;border:0;border-bottom:1px solid var(--line);background:none;text-align:left;width:100%}
+.item{display:grid;grid-template-columns:84px 1fr;gap:14px;align-items:center;padding-block:12px;border-bottom:1px solid var(--line);text-decoration:none}
 .list .item:last-child{border-bottom:0}
 .item:active{background:var(--soft)}
-.thumb{aspect-ratio:1;width:100%;max-width:100%;border-radius:12px;display:grid;place-items:center;position:relative;overflow:hidden}
-.thumb .glyph{font-family:"IBM Plex Sans KR",sans-serif;font-weight:700;color:var(--ink);opacity:.5;font-size:15px;text-align:center;line-height:1.2;padding:6px}
+.thumb{aspect-ratio:1;width:100%;max-width:100%;border-radius:12px;display:grid;place-items:center;overflow:hidden}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.glyph{font-family:"IBM Plex Sans KR",sans-serif;font-weight:700;color:var(--ink);opacity:.45;font-size:14px;text-align:center;line-height:1.3;padding:6px}
 .info{display:grid;gap:2px;min-width:0}
 .info h3{font-size:15px;font-weight:600;font-family:"Noto Sans KR",sans-serif}
-.info .sum{font-size:12.5px;color:var(--muted)}
-.info .row{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:4px}
+.sum{font-size:12.5px;color:var(--muted)}
+.row{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:4px}
 .price{font-weight:700;font-variant-numeric:tabular-nums}
 .price small{font-weight:400;color:var(--muted);font-size:12px}
 .badge{display:inline-block;font-size:11px;font-weight:500;padding:1px 7px;border-radius:5px;background:var(--accent-soft);color:var(--accent)}
 .badge.rental{background:var(--warm-soft);color:var(--warm)}
 .badge.muted{background:var(--soft);color:var(--muted)}
 
-/* 블로그 가로 스크롤 */
-.sec{padding-top:30px;scroll-margin-top:calc(var(--tabs-h) + env(safe-area-inset-top,0px))}
-.sec-head{display:flex;justify-content:space-between;align-items:baseline;padding-inline:16px;margin-bottom:10px}
+/* 공통 섹션 */
+.sec{padding-top:30px}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding-inline:16px;margin-bottom:10px}
 .sec-head h2{font-size:18px}
-.sec-head a{font-size:13px;color:var(--accent);text-decoration:none;font-weight:500}
+.sec-head a{font-size:13px;color:var(--accent);text-decoration:none;font-weight:500;white-space:nowrap}
+.sec-sub{padding-inline:16px;margin:-4px 0 12px;font-size:13px;color:var(--muted)}
+
+/* 블로그 사례 카드 */
 .hscroll{display:flex;gap:10px;overflow-x:auto;padding-inline:16px;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:4px}
 .hscroll::-webkit-scrollbar{display:none}
-.post{flex:0 0 78%;scroll-snap-align:start;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px;display:grid;gap:4px;text-decoration:none}
-.post time{font-size:11.5px;color:var(--muted);font-variant-numeric:tabular-nums}
-.post h3{font-size:14.5px}
-.post p{margin:0;font-size:12.5px;color:var(--muted)}
+.hscroll .case{flex:0 0 80%;scroll-snap-align:start}
+.cases{display:grid;gap:12px;padding-inline:16px}
+.case{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;text-decoration:none;display:grid}
+.case .cover{aspect-ratio:16/9;max-width:100%;display:grid;place-items:center}
+.case .cover img{width:100%;height:100%;object-fit:cover}
+.case .body{padding:12px 14px 14px;display:grid;gap:5px}
+.case .meta{display:flex;gap:6px;flex-wrap:wrap;align-items:center;font-size:11.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.case h3{font-size:15px}
+.case p{margin:0;font-size:13px;color:var(--muted)}
+.case .more{font-size:12.5px;color:var(--accent);font-weight:500}
+
+/* 관련 소식 */
+.news{display:grid;padding-inline:16px}
+.news a{display:grid;gap:2px;padding-block:11px;border-bottom:1px solid var(--line);text-decoration:none}
+.news a:last-child{border-bottom:0}
+.news b{font-size:14px;font-weight:500}
+.news span{font-size:11.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.auto-note{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;color:var(--warm);background:var(--warm-soft);border-radius:6px;padding:2px 8px}
+
+/* 상품 상세 페이지 */
+.back{display:inline-flex;align-items:center;gap:4px;margin:4px 16px 10px;background:none;border:0;padding:4px 0;color:var(--muted);font-size:14px}
+.p-hero{padding-inline:16px;display:grid;gap:14px}
+.p-hero .thumb{aspect-ratio:4/3;border-radius:16px}
+.p-hero .glyph{font-size:20px}
+.p-hero h1{font-size:22px;margin-top:2px}
+.spec{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:0;padding:14px 0;border-block:1px solid var(--line);font-size:13.5px}
+.spec dt{color:var(--muted)}
+.spec dd{margin:0;font-variant-numeric:tabular-nums}
+.opt{display:grid;gap:5px}
+.opt label{font-size:12.5px;color:var(--muted)}
+.opt select{padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);font:inherit;font-size:16px}
+.actions{display:grid;gap:8px}
+.note{font-size:12px;color:var(--muted);margin:0}
+.empty{padding:0 16px;font-size:13px;color:var(--muted)}
 
 /* 문의 */
 .contact{padding-inline:16px;display:grid;gap:12px}
 .ways{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .way{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px;display:grid;gap:2px;text-align:left}
 .way span{font-size:11.5px;color:var(--muted)}
-.way b{font-size:14px;font-variant-numeric:tabular-nums}
+.way b{font-size:14px;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
 .way small{font-size:11px;color:var(--accent)}
 form.inq{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:grid;gap:10px}
 form.inq label{display:grid;gap:4px;font-size:12.5px;color:var(--muted)}
@@ -124,297 +157,61 @@ form.inq textarea{min-height:96px;resize:vertical}
 
 footer{padding:28px 16px 8px;font-size:11.5px;color:var(--muted);display:grid;gap:3px}
 
-/* 버튼 */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:13px 16px;border-radius:12px;border:1px solid var(--line);background:var(--surface);font-weight:600;font-size:15px;text-decoration:none;width:100%}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
 .btn.store{background:var(--store);border-color:var(--store);color:var(--store-ink)}
 .btn[disabled]{opacity:.5;cursor:not-allowed}
 
-/* 하단 고정 바 */
 .bar{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:color-mix(in srgb,var(--ground) 94%,transparent);backdrop-filter:blur(10px);border-top:1px solid var(--line)}
 .bar-inner{max-width:488px;margin:0 auto;display:grid;grid-template-columns:1fr 1.3fr;gap:8px}
 .bar .btn{padding:11px 12px}
 
-/* 상품 상세 바텀시트 */
-.scrim{position:fixed;inset:0;background:var(--scrim);z-index:40;opacity:0;pointer-events:none;transition:opacity .2s}
-.scrim.open{opacity:1;pointer-events:auto}
-.sheet{position:fixed;left:0;right:0;bottom:0;z-index:50;max-width:520px;margin:0 auto;background:var(--surface);border-radius:20px 20px 0 0;max-height:88vh;overflow-y:auto;transform:translateY(105%);transition:transform .25s ease;padding:8px 18px calc(18px + env(safe-area-inset-bottom,0px))}
-.sheet.open{transform:none}
-.grab{width:40px;height:4px;border-radius:4px;background:var(--line);margin:4px auto 12px}
-.sheet .head{display:grid;grid-template-columns:96px 1fr;gap:14px;align-items:center}
-.sheet h3{font-size:18px;margin:2px 0 4px}
-.sheet .close{position:absolute;top:10px;right:12px;border:0;background:var(--soft);border-radius:999px;width:32px;height:32px;font-size:16px;line-height:1}
-.spec{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:16px 0;padding:14px 0;border-block:1px solid var(--line);font-size:13.5px}
-.spec dt{color:var(--muted)}
-.spec dd{margin:0;font-variant-numeric:tabular-nums}
-.opt{display:grid;gap:5px;margin-bottom:14px}
-.opt label{font-size:12.5px;color:var(--muted)}
-.opt select{padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--ground);color:var(--ink);font:inherit;font-size:16px}
-.actions{display:grid;gap:8px}
-.note{font-size:12px;color:var(--muted);margin:10px 0 0}
-details.data{margin-top:14px;font-size:12px;border:1px dashed var(--line);border-radius:10px;padding:10px 12px}
-details.data summary{color:var(--warm);cursor:pointer;font-weight:500}
-details.data pre{overflow-x:auto;margin:8px 0 0;color:var(--muted);font-size:11.5px;line-height:1.5}
-
 .toast{position:fixed;left:50%;bottom:calc(var(--bar-h) + env(safe-area-inset-bottom,0px) + 18px);transform:translateX(-50%);background:var(--ink);color:var(--ground);padding:8px 14px;border-radius:999px;font-size:13px;z-index:60}
-
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.sheet,.scrim{transition:none}}
+.loading{padding:40px 16px;color:var(--muted);text-align:center}
 </style>
-<style>html,body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
 <body>
-
 <div class="app">
-  <div class="proto">디자인 시안이에요. 상품과 가격은 예시이고, 블로그·스토어 링크는 실제 주소예요.</div>
-
   <header class="top">
-    <div class="brand">
+    <a class="brand" href="#" data-home>
       <span class="mark"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 14s-5.5-3.3-5.5-7.2A3 3 0 0 1 8 5a3 3 0 0 1 5.5 1.8C13.5 10.7 8 14 8 14Z" fill="var(--accent-ink)"/></svg></span>
-      라이프케어서비스
-    </div>
+      <span id="brand-name">라이프케어서비스</span>
+    </a>
     <div class="top-links">
       <a class="pill" id="blog-link" target="_blank" rel="noopener">블로그</a>
       <a class="pill" id="store-link" target="_blank" rel="noopener">스토어</a>
     </div>
   </header>
 
-  <section class="intro">
-    <h1>가족 건강과 생활을 위한<br><em>케어 상품</em>을 모았어요</h1>
-    <p>건강식품부터 헬스케어 기기, 돌봄용품, 렌탈까지. 위 탭에서 분야를 고르거나 아래로 쭉 둘러보세요.</p>
-    <div class="facts" id="facts"></div>
-  </section>
-
-  <nav class="tabs" aria-label="상품 분야"><div class="tabs-inner" id="tabs"></div></nav>
-
-  <main id="catalog"></main>
-
-  <section class="sec" id="blog">
-    <div class="sec-head"><h2>블로그 소식</h2><a id="blog-more" target="_blank" rel="noopener">전체 보기</a></div>
-    <div class="hscroll" id="posts"></div>
-  </section>
+  <div id="view"><p class="loading">불러오는 중…</p></div>
 
   <section class="sec" id="contact">
     <div class="sec-head"><h2>문의하기</h2></div>
     <div class="contact">
       <div class="ways">
-        <button class="way" type="button" data-copy="010-0000-0000"><span>전화 상담</span><b>010-0000-0000</b><small>눌러서 번호 복사</small></button>
-        <button class="way" type="button" data-copy="@라이프케어서비스"><span>카카오톡 채널</span><b>@라이프케어서비스</b><small>눌러서 복사</small></button>
+        <button class="way" type="button" id="copy-phone"><span>전화 상담</span><b id="phone"></b><small>눌러서 번호 복사</small></button>
+        <button class="way" type="button" id="copy-kakao"><span>카카오톡 채널</span><b id="kakao"></b><small>눌러서 복사</small></button>
       </div>
       <form class="inq" id="inq">
         <label for="f-name">이름<input id="f-name" required placeholder="홍길동" autocomplete="name"></label>
         <label for="f-phone">연락처<input id="f-phone" required inputmode="tel" placeholder="010-0000-0000" autocomplete="tel"></label>
-        <label for="f-type">문의 종류<select id="f-type"><option>상품 문의</option><option>렌탈 상담</option><option>견적·단체 주문</option><option>기타</option></select></label>
+        <label for="f-type">문의 종류<select id="f-type"><option>상품 문의</option><option>설치·납품 견적</option><option>렌탈 상담</option><option>기타</option></select></label>
         <label for="f-msg">내용<textarea id="f-msg" placeholder="궁금한 점을 적어 주세요"></textarea></label>
         <button class="btn primary" type="submit">문의 남기기</button>
-        <p class="ok" id="f-ok" hidden>시안이라 실제로 전송되지는 않아요. 실제 사이트에서는 이메일이나 카카오 알림으로 받게 됩니다.</p>
+        <p class="ok" id="f-ok" hidden>접수 기능은 준비 중이에요. 급한 문의는 전화나 카카오톡으로 연락 주세요.</p>
       </form>
     </div>
   </section>
 
-  <footer>
-    <div>라이프케어서비스 · 대표 홍길동 · 사업자등록번호 000-00-00000</div>
-    <div>통신판매업 신고 제0000-서울-0000호 · 이용약관 · 개인정보처리방침</div>
-  </footer>
+  <footer><div id="business"></div><div>이용약관 · 개인정보처리방침</div></footer>
 </div>
 
 <div class="bar"><div class="bar-inner">
-  <a class="btn" href="#contact">문의하기</a>
+  <a class="btn" href="#contact" data-contact>문의하기</a>
   <a class="btn store" id="bar-store" target="_blank" rel="noopener">스마트스토어 가기</a>
 </div></div>
-
-<div class="scrim" id="scrim"></div>
-<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title" hidden></div>
 <div class="toast" id="toast" hidden></div>
 
-<script>
-/* ── 데이터 ─────────────────────────────
-   결제를 나중에 붙일 수 있도록 상품마다 판매 방식(saleType)과
-   가격, 옵션, 재고, 결제 가능 여부(purchasable)를 둡니다.
-   지금은 purchasable:false 라서 구매는 스마트스토어로, 나머지는 문의로 연결돼요. */
-const STORE_URL = "https://smartstore.naver.com/lifecareservice";
-const BLOG_URL = "https://blog.naver.com/lifecareservicejoa";
-
-const categories = [
-  {id:"health", name:"건강식품", tone:"--t1", desc:"홍삼, 유산균, 영양제"},
-  {id:"device", name:"헬스케어기기", tone:"--t3", desc:"안마기, 혈압계, 체성분계"},
-  {id:"senior", name:"시니어케어", tone:"--t2", desc:"보행보조, 욕실안전, 돌봄용품"},
-  {id:"living", name:"생활·위생", tone:"--t5", desc:"살균, 필터, 생활소모품"},
-  {id:"rental", name:"렌탈", tone:"--t4", desc:"정수기, 안마의자, 매트리스"},
-  {id:"gift",   name:"선물세트", tone:"--t6", desc:"명절, 효도, 단체선물"}
-];
-
-const products = [
-  {id:"p001", cat:"health", name:"6년근 홍삼정 스틱 30포", summary:"하루 한 포, 물 없이 간편하게", price:59000, unit:"1박스", saleType:"sale", options:["30포","60포 (+49,000원)"], stock:"in", purchasable:false, smartstore:STORE_URL, tags:["인기"]},
-  {id:"p002", cat:"health", name:"생유산균 100억 CFU 60캡슐", summary:"장 건강을 위한 2개월분", price:32000, unit:"1통", saleType:"sale", options:["1통","3통 세트 (+58,000원)"], stock:"in", purchasable:false, smartstore:STORE_URL, tags:[]},
-  {id:"p003", cat:"health", name:"rTG 오메가3 1,000mg", summary:"고함량 rTG형, 3개월분", price:45000, unit:"1통", saleType:"sale", options:["1통"], stock:"low", purchasable:false, smartstore:STORE_URL, tags:[]},
-  {id:"p004", cat:"device", name:"무선 목·어깨 마사지기", summary:"온열 기능, 3단계 강도 조절", price:89000, unit:"1대", saleType:"sale", options:["그레이","베이지"], stock:"in", purchasable:false, smartstore:STORE_URL, tags:["인기"]},
-  {id:"p005", cat:"device", name:"가정용 자동 혈압계", summary:"팔뚝형, 음성 안내, 기록 120회", price:67000, unit:"1대", saleType:"sale", options:["기본형"], stock:"in", purchasable:false, smartstore:STORE_URL, tags:[]},
-  {id:"p006", cat:"device", name:"스마트 체성분 체중계", summary:"앱 연동, 가족 8명 저장", price:39000, unit:"1대", saleType:"sale", options:["화이트","블랙"], stock:"in", purchasable:false, smartstore:STORE_URL, tags:[]},
-  {id:"p007", cat:"senior", name:"접이식 경량 보행보조기", summary:"알루미늄 프레임 2.1kg, 좌석 포함", price:128000, unit:"1대", saleType:"sale", options:["기본"], stock:"in", purchasable:false, smartstore:STORE_URL, tags:[]},
-  {id:"p008", cat:"senior", name:"욕실 안전손잡이 설치 패키지", summary:"방문 설치 포함, 지역별 상담", price:null, unit:"1세트", saleType:"inquiry", options:[], stock:"in", purchasable:false, smartstore:null, tags:[]},
-  {id:"p009", cat:"senior", name:"성인용 위생 패드 대형 10팩", summary:"흡수력 강화, 정기배송 가능", price:48000, unit:"10팩", saleType:"sale", options:["대형","특대형 (+6,000원)"], stock:"in", purchasable:false, smartstore:STORE_URL, tags:[]},
-  {id:"p010", cat:"living", name:"UV-C 칫솔 살균기", summary:"가족 4인용, 벽 부착형", price:29000, unit:"1대", saleType:"sale", options:["화이트"], stock:"in", purchasable:false, smartstore:STORE_URL, tags:[]},
-  {id:"p011", cat:"living", name:"H13 헤파 공기청정기 필터", summary:"주요 모델 호환, 6개월 교체", price:24000, unit:"1개", saleType:"sale", options:["A형","B형"], stock:"out", purchasable:false, smartstore:STORE_URL, tags:[]},
-  {id:"p012", cat:"living", name:"무향 손소독 겔 500ml 3개", summary:"에탄올 70%, 대용량 펌프형", price:15900, unit:"3개", saleType:"sale", options:["3개","6개 (+13,000원)"], stock:"in", purchasable:false, smartstore:STORE_URL, tags:[]},
-  {id:"p013", cat:"rental", name:"직수형 냉온정수기", summary:"4개월 주기 방문 관리 포함", price:29900, unit:"월", saleType:"rental", rentalMonths:60, options:["60개월 약정","36개월 약정 (+월 5,000원)"], stock:"in", purchasable:false, smartstore:null, tags:[]},
-  {id:"p014", cat:"rental", name:"프리미엄 안마의자", summary:"전신 3D 마사지, 무료 설치", price:69900, unit:"월", saleType:"rental", rentalMonths:48, options:["48개월 약정"], stock:"in", purchasable:false, smartstore:null, tags:[]},
-  {id:"p015", cat:"rental", name:"라텍스 매트리스 퀸", summary:"1년마다 케어 서비스", price:39900, unit:"월", saleType:"rental", rentalMonths:60, options:["퀸","킹 (+월 7,000원)"], stock:"in", purchasable:false, smartstore:null, tags:[]},
-  {id:"p016", cat:"gift", name:"효도 건강 선물세트", summary:"홍삼, 유산균, 오메가3 구성", price:119000, unit:"1세트", saleType:"sale", options:["기본 포장","보자기 포장 (+5,000원)"], stock:"in", purchasable:false, smartstore:STORE_URL, tags:["명절"]},
-  {id:"p017", cat:"gift", name:"기업 단체 선물 (30세트 이상)", summary:"수량과 예산에 맞춘 구성 제안", price:null, unit:"-", saleType:"inquiry", options:[], stock:"in", purchasable:false, smartstore:null, tags:[]}
-];
-
-const posts = [
-  {date:"2026-09-20", title:"환절기 면역 관리, 홍삼과 유산균 같이 먹어도 될까요?", excerpt:"복용 시간과 함께 먹을 때 주의할 점까지 정리했어요."},
-  {date:"2026-09-12", title:"부모님 댁 욕실, 안전손잡이는 어디에 달아야 할까", excerpt:"실제 설치 사례 세 곳을 사진과 함께 소개해요."},
-  {date:"2026-09-03", title:"정수기 렌탈과 구매, 5년 기준으로 비교해 봤어요", excerpt:"관리비, 필터 교체, 약정까지 계산한 비교표."},
-  {date:"2026-08-27", title:"추석 선물세트 준비하시는 분들께", excerpt:"예산대로 고르는 효도 선물 구성 세 가지."}
-];
-
-/* ── 유틸 ─────────────────────────────── */
-const $ = s => document.querySelector(s);
-const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const won = n => n.toLocaleString("ko-KR") + "원";
-const catOf = id => categories.find(c => c.id === id);
-const inCat = id => products.filter(p => p.cat === id);
-
-function priceHTML(p){
-  if (p.saleType === "inquiry") return `<span class="price">가격 문의</span>`;
-  if (p.saleType === "rental") return `<span class="price">월 ${won(p.price)} <small>${p.rentalMonths}개월</small></span>`;
-  return `<span class="price">${won(p.price)}</span>`;
-}
-function badgeHTML(p){
-  if (p.saleType === "rental") return `<span class="badge rental">렌탈</span>`;
-  if (p.saleType === "inquiry") return `<span class="badge muted">상담 후 견적</span>`;
-  if (p.stock === "out") return `<span class="badge muted">품절</span>`;
-  if (p.stock === "low") return `<span class="badge rental">재고 적음</span>`;
-  if (p.tags.length) return `<span class="badge">${esc(p.tags[0])}</span>`;
-  return "";
-}
-const thumbHTML = p => `<div class="thumb" style="background:var(${catOf(p.cat).tone})"><span class="glyph">사진</span></div>`;
-
-let toastTimer;
-function toast(msg){ const t = $("#toast"); t.textContent = msg; t.hidden = false; clearTimeout(toastTimer); toastTimer = setTimeout(() => t.hidden = true, 1800); }
-
-/* ── 화면 그리기 ───────────────────────── */
-function renderStatic(){
-  for (const id of ["#blog-link","#blog-more"]) $(id).href = BLOG_URL;
-  for (const id of ["#store-link","#bar-store"]) $(id).href = STORE_URL;
-  $("#facts").innerHTML = `<span class="fact"><b>${products.length}</b>개 품목</span><span class="fact"><b>${categories.length}</b>개 분야</span><span class="fact">렌탈·방문 설치 상담</span>`;
-
-  $("#tabs").innerHTML = categories.map(c => `<button class="tab" data-target="cat-${c.id}">${esc(c.name)}<span class="n">${inCat(c.id).length}</span></button>`).join("")
-    + `<button class="tab" data-target="blog">블로그</button><button class="tab" data-target="contact">문의</button>`;
-
-  $("#catalog").innerHTML = categories.map(c => `
-    <section class="cat-sec" id="cat-${c.id}">
-      <div class="cat-head"><h2>${esc(c.name)}</h2><span>${esc(c.desc)}</span></div>
-      <div class="list">${inCat(c.id).map(p => `
-        <button class="item" data-product="${p.id}">
-          ${thumbHTML(p)}
-          <div class="info">
-            <h3>${esc(p.name)}</h3>
-            <span class="sum">${esc(p.summary)}</span>
-            <div class="row">${priceHTML(p)}${badgeHTML(p)}</div>
-          </div>
-        </button>`).join("")}
-      </div>
-    </section>`).join("");
-
-  $("#posts").innerHTML = posts.map(x => `<a class="post" href="${BLOG_URL}" target="_blank" rel="noopener"><time>${x.date.replaceAll("-",".")}</time><h3>${esc(x.title)}</h3><p>${esc(x.excerpt)}</p></a>`).join("");
-}
-
-/* ── 탭 ↔ 스크롤 연동 ───────────────────── */
-function setActiveTab(id){
-  document.querySelectorAll(".tab").forEach(t => {
-    const on = t.dataset.target === id;
-    t.setAttribute("aria-current", on);
-    if (on) { const bar = $("#tabs"); bar.scrollTo({left: t.offsetLeft - bar.clientWidth/2 + t.clientWidth/2, behavior:"smooth"}); }
-  });
-}
-function watchSections(){
-  const ids = [...categories.map(c => "cat-"+c.id), "blog", "contact"];
-  const els = ids.map(id => document.getElementById(id));
-  const onScroll = () => {
-    const line = $(".tabs").getBoundingClientRect().bottom + 12;
-    let current = ids[0];
-    for (const el of els) if (el.getBoundingClientRect().top <= line) current = el.id;
-    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) current = ids[ids.length-1];
-    if (current !== watchSections.last) { watchSections.last = current; setActiveTab(current); }
-  };
-  addEventListener("scroll", onScroll, {passive:true});
-  onScroll();
-}
-
-/* ── 상품 상세 시트 ───────────────────── */
-let lastFocus = null;
-function openSheet(id){
-  const p = products.find(x => x.id === id), c = catOf(p.cat);
-  let actions;
-  if (p.saleType === "sale") {
-    actions = (p.stock === "out"
-        ? `<button class="btn" disabled>품절</button>`
-        : `<a class="btn store" href="${p.smartstore}" target="_blank" rel="noopener">스마트스토어에서 구매</a>`)
-      + `<button class="btn" data-ask="${p.id}">문의하기</button>`;
-  } else {
-    actions = `<button class="btn primary" data-ask="${p.id}">${p.saleType === "rental" ? "렌탈 상담 신청" : "견적 문의하기"}</button>`;
-  }
-  const s = $("#sheet");
-  s.innerHTML = `
-    <div class="grab"></div>
-    <button class="close" data-close aria-label="닫기">✕</button>
-    <div class="head">${thumbHTML(p)}<div><span class="sum" style="font-size:12px;color:var(--muted)">${esc(c.name)}</span><h3 id="sheet-title">${esc(p.name)}</h3>${priceHTML(p)}</div></div>
-    <dl class="spec">
-      <dt>설명</dt><dd>${esc(p.summary)}</dd>
-      <dt>판매 단위</dt><dd>${esc(p.unit)}</dd>
-      <dt>판매 방식</dt><dd>${{sale:"일반 판매",rental:"렌탈 (방문 관리 포함)",inquiry:"상담 후 견적"}[p.saleType]}</dd>
-      <dt>상태</dt><dd>${{in:"판매 중",low:"재고 적음",out:"품절"}[p.stock]}</dd>
-    </dl>
-    ${p.options.length ? `<div class="opt"><label for="opt">옵션</label><select id="opt">${p.options.map(o => `<option>${esc(o)}</option>`).join("")}</select></div>` : ""}
-    <div class="actions">${actions}</div>
-    ${p.saleType === "sale" ? `<p class="note">결제 기능을 붙이면 '스마트스토어에서 구매' 자리에 '바로 구매' 버튼이 들어가요.</p>` : ""}`;
-  lastFocus = document.activeElement;
-  s.hidden = false;
-  requestAnimationFrame(() => { s.classList.add("open"); $("#scrim").classList.add("open"); s.querySelector(".close").focus(); });
-  document.body.style.overflow = "hidden";
-}
-function closeSheet(){
-  const s = $("#sheet");
-  s.classList.remove("open"); $("#scrim").classList.remove("open");
-  document.body.style.overflow = "";
-  setTimeout(() => { if (!s.classList.contains("open")) s.hidden = true; }, 260);
-  if (lastFocus) lastFocus.focus({preventScroll:true});
-}
-function askAbout(id){
-  const p = products.find(x => x.id === id);
-  closeSheet();
-  $("#f-type").value = p.saleType === "rental" ? "렌탈 상담" : p.saleType === "inquiry" ? "견적·단체 주문" : "상품 문의";
-  $("#f-msg").value = `[${p.name}] 문의드립니다.\n`;
-  document.getElementById("contact").scrollIntoView({behavior:"smooth"});
-  setTimeout(() => $("#f-name").focus({preventScroll:true}), 500);
-}
-
-/* ── 이벤트 ─────────────────────────────── */
-document.addEventListener("click", e => {
-  const t = e.target;
-  const tab = t.closest(".tab");
-  if (tab) return document.getElementById(tab.dataset.target).scrollIntoView({behavior:"smooth"});
-  const item = t.closest("[data-product]");
-  if (item) return openSheet(item.dataset.product);
-  const ask = t.closest("[data-ask]");
-  if (ask) return askAbout(ask.dataset.ask);
-  if (t.closest("[data-close]") || t.id === "scrim") return closeSheet();
-  const cp = t.closest("[data-copy]");
-  if (cp) {
-    const v = cp.dataset.copy;
-    navigator.clipboard?.writeText(v).then(() => toast("복사했어요: " + v), () => toast(v));
-    if (!navigator.clipboard) toast(v);
-  }
-});
-document.addEventListener("keydown", e => { if (e.key === "Escape" && $("#sheet").classList.contains("open")) closeSheet(); });
-$("#inq").addEventListener("submit", e => { e.preventDefault(); $("#f-ok").hidden = false; });
-
-renderStatic();
-watchSections();
-</script>
-
+<script src="app.js"></script>
 </body>
 </html>
