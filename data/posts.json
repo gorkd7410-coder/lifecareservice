@@ -112,5 +112,75 @@
       "p016",
       "p017"
     ]
+  },
+  {
+    "id": "b09",
+    "type": "project",
+    "title": "OO종합복지관 목·어깨 마사지기 20대 납품",
+    "date": "2026-09-09",
+    "url": "https://blog.naver.com/lifecareservicejoa",
+    "thumbnail": null,
+    "client": "OO종합복지관",
+    "location": "광주 북구",
+    "summary": "어르신 건강 프로그램용으로 20대를 납품하고 사용법을 안내했어요.",
+    "productIds": [
+      "p004"
+    ]
+  },
+  {
+    "id": "b10",
+    "type": "project",
+    "title": "△△구청 경로당 15곳 자동 혈압계 보급",
+    "date": "2026-08-18",
+    "url": "https://blog.naver.com/lifecareservicejoa",
+    "thumbnail": null,
+    "client": "△△구청",
+    "location": "서울 은평",
+    "summary": "경로당마다 혈압계 1대씩, 기록 방법 안내문과 함께 설치했어요.",
+    "productIds": [
+      "p005"
+    ]
+  },
+  {
+    "id": "b11",
+    "type": "project",
+    "title": "□□요양원 보행보조기 30대 납품",
+    "date": "2026-09-02",
+    "url": "https://blog.naver.com/lifecareservicejoa",
+    "thumbnail": null,
+    "client": "□□요양원",
+    "location": "경기 용인",
+    "summary": "입소 어르신 체형에 맞게 높이를 조절해 전달했어요.",
+    "productIds": [
+      "p007"
+    ]
+  },
+  {
+    "id": "b12",
+    "type": "project",
+    "title": "◇◇요양병원 위생 패드 월 정기 납품 시작",
+    "date": "2026-08-25",
+    "url": "https://blog.naver.com/lifecareservicejoa",
+    "thumbnail": null,
+    "client": "◇◇요양병원",
+    "location": "충남 천안",
+    "summary": "매달 첫 주에 병동별로 나눠 배송하고 있어요.",
+    "productIds": [
+      "p009"
+    ]
+  },
+  {
+    "id": "b13",
+    "type": "project",
+    "title": "OO교육청 연수원 전자칠판 8대 설치",
+    "date": "2026-06-05",
+    "url": "https://blog.naver.com/lifecareservicejoa",
+    "thumbnail": null,
+    "client": "OO교육청 연수원",
+    "location": "충북 청주",
+    "summary": "교사 연수실 8곳에 설치하고 첫 연수 때 현장 지원을 했어요.",
+    "productIds": [
+      "p101"
+    ]
   }
 ]

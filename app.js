@@ -33,9 +33,7 @@ function badgesHTML(p){
   if (p.saleType === "rental") out.push(`<span class="badge rental">렌탈</span>`);
   if (p.stock === "out") out.push(`<span class="badge muted">품절</span>`);
   else if (p.stock === "low") out.push(`<span class="badge rental">재고 적음</span>`);
-  const n = postsFor(p.id).filter(x => x.type === "project").length;
-  if (n) out.push(`<span class="badge">납품 사례 ${n}</span>`);
-  else if (p.tags.includes("인기")) out.push(`<span class="badge">인기</span>`);
+  if (p.tags.includes("인기")) out.push(`<span class="badge">인기</span>`);
   return out.join("");
 }
 const tileHTML = (p, label) => p.image
@@ -58,13 +56,30 @@ function caseHTML(x){
     </div></a>`;
 }
 
+/* 상품 바로 아래에 붙는 납품 사례 줄: 썸네일과 제목만 간단히 */
+function stripHTML(p){
+  const list = postsFor(p.id).filter(x => x.type === "project");
+  if (!list.length) return "";
+  const tone = catOf(p.cat).tone;
+  return `<div class="strip">
+    <div class="strip-head"><span>납품 현장 ${list.length}곳</span>${list.length > 2 ? `<a href="#${p.id}">모두 보기</a>` : ""}</div>
+    <div class="strip-row">${list.map(x => `
+      <a class="mini" href="${esc(x.url)}" target="_blank" rel="noopener">
+        ${x.thumbnail ? `<div class="mini-cover"><img src="${esc(x.thumbnail)}" alt="" loading="lazy"></div>`
+                      : `<div class="mini-cover" style="background:var(${tone})"><span class="glyph">현장 사진</span></div>`}
+        <b>${esc(x.title)}</b>
+        <span>${esc([x.client, dot(x.date)].filter(Boolean).join(" · "))}</span>
+      </a>`).join("")}
+    </div></div>`;
+}
+
 /* ── 홈 ─────────────────────────────── */
 function homeHTML(){
   const projects = posts.filter(x => x.type === "project").sort(byDate).slice(0, 6);
   return `
   <section class="intro">
     <h1>필요한 곳에 필요한 장비와 상품을<br><em>직접 납품하고 설치해요</em></h1>
-    <p>전자칠판 같은 교육·사무기기부터 건강식품, 헬스케어기기, 렌탈까지. 분야를 고르거나 아래로 둘러보시고, 상품을 누르면 실제 납품 사례를 볼 수 있어요.</p>
+    <p>전자칠판 같은 교육·사무기기부터 헬스케어기기, 시니어케어 용품까지. 상품마다 실제로 납품하고 설치한 현장을 함께 보여 드려요.</p>
     <div class="facts">
       <span class="fact"><b>${products.length}</b>개 품목</span>
       <span class="fact"><b>${categories.length}</b>개 분야</span>
@@ -80,14 +95,17 @@ function homeHTML(){
     <section class="cat-sec" id="cat-${c.id}">
       <div class="cat-head"><h2>${esc(c.name)}</h2><span>${esc(c.desc)}</span></div>
       <div class="list">${inCat(c.id).map(p => `
-        <a class="item" href="#${p.id}">
-          ${tileHTML(p, "상품 사진")}
-          <div class="info">
-            <h3>${esc(p.name)}</h3>
-            <span class="sum">${esc(p.summary)}</span>
-            <div class="row">${priceHTML(p)}${badgesHTML(p)}</div>
-          </div>
-        </a>`).join("")}
+        <div class="prod">
+          <a class="item" href="#${p.id}">
+            ${tileHTML(p, "상품 사진")}
+            <div class="info">
+              <h3>${esc(p.name)}</h3>
+              <span class="sum">${esc(p.summary)}</span>
+              <div class="row">${priceHTML(p)}${badgesHTML(p)}</div>
+            </div>
+          </a>
+          ${stripHTML(p)}
+        </div>`).join("")}
       </div>
     </section>`).join("")}
   <section class="sec" id="cases">
